@@ -15,21 +15,17 @@ dias="2"
 servermessage="<h3><font color='red'>
  Server Message
 </font></h3>
-<h4><font color='green'>
-HCM Public SSH Key
-</3font></h4>
 <h4><font color='blue'>
-Used Count ◈──⪧ 1,500
-</font></h4>
-<h4><font color='yellow'>
+HCM SSH Public File
+Online
+Thank For your
+</3font></h4>
+<h4><font color='red'>
 Online 
-</font></h4>
-<h6><font color='magenta'>
-Thank For your 
-</font></h6>
-<h3><font color='red'>
-HCM Channel  
-</font></h3>"
+</font></h4>"
+ 
+</font></h4>HCM Channel 
+<h6><font color=''>
 
 [[ $EUID -ne 0 ]] && echo -e "${red}Error: ${plain} You must use root user to run this script!\n" && exit 1
 
