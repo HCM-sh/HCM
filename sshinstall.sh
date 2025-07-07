@@ -13,9 +13,9 @@ password="0000"
 sshlimiter="1000"
 dias="2"
 
- servermessage="<h4><font color='red'>
+ servermessage="<h2><font color='red'>
  Server Message
-</font></h4>
+</font></h2>
 
 <h3><font color='blue'>
 HCM SSH Public File
