@@ -86,7 +86,7 @@ config_after_install() {
     if [[ x"${config_confirm}" == x"y" || x"${config_confirm}" == x"Y" ]]; then
         read -p "Please set your account name:" config_account
         echo -e "${yellow}Your account name will be set to:${config_account}${plain}"
-        read -p "Please set your account password:" config_password
+        read -p "Please set your account password{12345}:" config_password
         echo -e "${yellow}Your account password will be set to:${config_password}${plain}"
         read -p "Set the panel access port:" config_port
         echo -e "${yellow}Your panel access port will be set to:${config_port}${plain}"
@@ -156,6 +156,12 @@ install_x-ui() {
     chmod +x /usr/local/x-ui/x-ui.sh
     chmod +x /usr/bin/x-ui
     config_after_install
+    #echo -e "For a fresh installation, the default web port is ${green}56789${plain}, and the username and password are ${green}hha${plain"} by default
+    #echo -e "Make sure this port is not occupied by another program, ${yellow} and make sure port 56789 is allowed ${plain}"
+    #    echo -e "If you want to change 56789 to a different port, enter the command to modify it, and also make sure that the port you modified is also allowed ..."
+    #echo -e ""
+    #echo -e "If you're updating the panel, access the panel the way you used to"
+    #echo -e ""
     systemctl daemon-reload
     systemctl enable x-ui
     systemctl start x-ui
@@ -164,8 +170,21 @@ install_x-ui() {
     echo -e "How to use HCM Admin Script:"
     echo -e "----------------------------------------------"
     echo -e "x-ui              - Show admin menu (more functions)"
-    echo -e "HCM Admin Script       - Launch the     HCM   panel"
-    echo -e "port                   - 12345          HCM   panel"
-}echo -e "${green}Start the installation${plain}"
+    echo -e "x-ui start        - Launch the     HCM   panel"
+    echo -e "x-ui stop         - Stop the       HCM   panel"
+    echo -e "x-ui restart      - Restart the    HCM   panel"
+    echo -e "x-ui status       - View the       HCM   status"
+    echo -e "x-ui enable       - Set            HCM   to boot automatically"
+    echo -e "x-ui disable      - Cancel         HCM   boot"
+    echo -e "x-ui log          - Review the     HCM   logs"
+    echo -e "x-ui v2-ui        - Migrate the v2-HCM    account data of this machine to Ch"
+    echo -e "x-ui update       - Update the     HCM   panel"
+    echo -e "x-ui install      - Install the    HCM   panel"
+    echo -e "x-ui uninstall    -  Uninstall the HCM   panel"
+    echo -e "x-ui geo          - Update         geo   data"
+    echo -e "----------------------------------------------"
+}
+
+echo -e "${green}Start the installation${plain}"
 install_base
 install_x-ui $1
