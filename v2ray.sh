@@ -86,7 +86,7 @@ config_after_install() {
     if [[ x"${config_confirm}" == x"y" || x"${config_confirm}" == x"Y" ]]; then
         read -p "Please set your account name:" config_account
         echo -e "${yellow}Your account name will be set to:${config_account}${plain}"
-        read -p "Please set your account password{12345}:" config_password
+        read -p "Please set your account password:" config_password
         echo -e "${yellow}Your account password will be set to:${config_password}${plain}"
         read -p "Set the panel access port:" config_port
         echo -e "${yellow}Your panel access port will be set to:${config_port}${plain}"
