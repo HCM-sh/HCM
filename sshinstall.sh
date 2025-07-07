@@ -13,26 +13,26 @@ password="0000"
 sshlimiter="1000"
 dias="2"
 
- servermessage="<h2><font color='red'>
+ servermessage="<h3><font color='red'>
  Server Message
-</font></h2>
+</font></h3>
 
-<h3><font color='blue'>
+<h4><font color='blue'>
 HCM SSH Public File
-</3font></h3>
+</3font></h4>
 
 
-<h3><font color='blue'>
+<h4><font color='blue'>
 Online 
-</font></h3>
+</font></h4>
 
-<h3><font color='blue'>
+<h4><font color='blue'>
 Thank For your 
-</font></h3>
+</font></h4>
 
-<h4><font color='red'>
+<h3><font color='red'>
 HCM Channel  
-</font></h4>"
+</font></h3>"
 
 
 [[ $EUID -ne 0 ]] && echo -e "${red}Error: ${plain} You must use root user to run this script!\n" && exit 1
